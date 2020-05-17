@@ -45,7 +45,7 @@ font-family:sans-serif;
     margin-left: 750px;
 
 }
-.nav{
+#navi{
     position: fixed;
     display: inline-block;
     background-color: #000000;
@@ -57,14 +57,21 @@ font-family:sans-serif;
     border-radius:0px 0px 15px 15px;
     border-right: 1px solid #ffffff;
 }
-a:link, a:visited{
+#navi ul{
+    list-style: none;
+    text-decoration: none;
+}
+#navi a{
+    text-decoration: none; 
+}
+#navi a:link, #navi a:visited{
     text-decoration: none;
     color: whitesmoke;
 }
-a:hover{
+#navi a:hover, a:active{
     color: red;
 }
-a:active{
+#navi #aktuell a{
     color: red;
 }
 .socialmedia{
@@ -83,8 +90,5 @@ textarea{
     font-size:10px;
     padding:25px 25px 10px 10px;
     margin-left: 60px;
-  }
-  .contact{
-      
-  }
+}
 

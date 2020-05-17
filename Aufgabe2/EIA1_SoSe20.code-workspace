@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"name": "EIA1_SoSe20",
+			"path": "."
+		},
+		{
+			"name": "Aufgabe1",
+			"path": "../Aufgabe1"
+		},
+		{
+			"name": "Aufgabe2",
+			"path": "../Aufgabe2"
+		}
+	],
+	"settings": {
+		"liveServer.settings.CustomBrowser": "chrome"
+	},
+	"liveServer.settings.root": ""
+}

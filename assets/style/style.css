@@ -1,47 +1,52 @@
 html{
     font-family:sans-serif;
 }
+h1{
+    position: absolute;
+    color: white;
+    font-size: 150px;
+    letter-spacing: -18px;
+    display: inline-block;
+    top: -70px;
+    right: 50px;
+    left: 250px;
+}
 body{
     background-image: url(/assets/backgrounds/bg.png);
     text-align: center;
     font-family:sans-serif;
+    width: 800px;
+    margin: auto;
 }
 .circle-header{
     position: static;
     display: inline-block;
     margin: -35px auto;
 }
-h1{
-color: whitesmoke;
-font-family:sans-serif;
-    font-size: 150px;
-    letter-spacing: -17px;
-    position: absolute;
-    bottom: 480px;
-    margin-left: 550px;
-
-}
 .subline-header{
-    color: whitesmoke;
+    color: white;
     font-family:sans-serif;
     font-size: 30px;
     position: absolute;
-    bottom: 550px;
-    margin-left: 750px;
+    bottom: 480px;
+    right: 90px;
 }
 .copy-header{
-    color: whitesmoke;
+    color: white;
     font-family:sans-serif;
     font-size: 15px;
     position: absolute;
-    bottom: 450px;
-    margin-left: 600px;
-    margin-right: 600px;
+    left: -350px;
+    bottom: 420px;
+    width: 350px;
+    margin-left: 650px;
+    margin-right: 400px;
     text-align: left;
 }
 .social-header{
     position: absolute;
     bottom: 400px;
+    right: 250px;
     margin-left: 750px;
 
 }
@@ -55,7 +60,6 @@ font-family:sans-serif;
     right: 100px;
     top: 0;
     border-radius:0px 0px 15px 15px;
-    border-right: 1px solid #ffffff;
 }
 #navi ul{
     list-style: none;
@@ -71,7 +75,7 @@ font-family:sans-serif;
 #navi a:hover, a:active{
     color: red;
 }
-#navi #aktuell a{
+#navi #aktuell{
     color: red;
 }
 .socialmedia{
@@ -79,8 +83,23 @@ font-family:sans-serif;
     font-size: large;
 }
 .form{
+color: black;
 font-family: sans-serif;
 width: 250px;
+}
+::placeholder{
+    font-family: sans-serif;
+    color: black;
+}
+input{
+    background-color: grey;
+    border-radius: 2px 2px 2px 2px;
+}
+
+button{
+    background-color: grey;
+    border-radius: 15px;
+
 }
 textarea{
     width: 250px; 
@@ -90,5 +109,11 @@ textarea{
     font-size:10px;
     padding:25px 25px 10px 10px;
     margin-left: 60px;
+    background-color: grey;
 }
-
+#überschrift_links {
+    text-align: left;
+    font-family: sans-serif;
+    width: 800px;
+    margin-left: 60px;
+}

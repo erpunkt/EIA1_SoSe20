@@ -1,0 +1,68 @@
+body{
+    background-image: url("bg.png");
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+section{
+    height: 400px;
+    width: 600px;
+    margin-top: 200px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position:relative;
+}
+
+section>.card{
+    height: auto;
+    width: auto;
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position:absolute;
+}
+
+section>.pengu{
+    position: absolute;
+    top: 240px;
+    right: 0px;
+    bottom: 0px;
+    left: 450px;
+    height: 150px;
+    width:150px;
+}
+
+section>.shell{
+    position: absolute;
+    left: -40px;
+    top: 280px;
+    bottom: 0px;
+    right: 0px;
+    width: 200px;
+    height: 142px;
+}
+
+section>.welcome{
+    position: absolute;
+    left: 100px;
+    top: 65px;
+    bottom: 0px;
+    right: 0px;
+    width: auto;
+    height: 142px;
+    color: white;
+}
+
+section>.Text{
+    position: absolute;
+    left: 100px;
+    top: 160px;
+    bottom: 200px;
+    right: 0px;
+    width: 400px;
+    height: 142px;
+    color: white;
+}

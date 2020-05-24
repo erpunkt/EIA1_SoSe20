@@ -1,61 +1,86 @@
 html{
-    font-family:sans-serif;
+    max-width: 800px;
 }
 body{
     background-image: url(/assets/backgrounds/bg.png);
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    font-family:sans-serif;
 }
 .circle-header{
-    position: static;
-    display: inline-block;
-    margin: -35px auto;
-}
-h1{
-color: whitesmoke;
-font-family:sans-serif;
-    font-size: 150px;
-    letter-spacing: -17px;
     position: absolute;
-    bottom: 480px;
-    margin-left: 550px;
-
+    display: inline-block;
+    width:800px;
+    top: 0px;
+    left: 320px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.headline-header{
+    position: absolute;
+    display: inline-block;
+    width: 400px;
+    color: white;
+    font-size: 150px;
+    font-weight: bold;
+    text-align: left;
+    letter-spacing: -18px;
+    top: -150px;
+    bottom: -750px;
+    left: 550px;
+    margin-bottom: 10px;;
+    margin-left: auto;
+    margin-right: auto;
 }
 .subline-header{
-    color: whitesmoke;
-    font-family:sans-serif;
-    font-size: 30px;
     position: absolute;
-    bottom: 550px;
-    margin-left: 750px;
+    display: inline-block;
+    width:400px;
+    color: white;
+    font-size: 30px;
+    text-align: left;
+    top: 130px;
+    bottom: -500px;
+    left: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .copy-header{
-    color: whitesmoke;
-    font-family:sans-serif;
-    font-size: 15px;
     position: absolute;
-    bottom: 450px;
-    margin-left: 600px;
-    margin-right: 600px;
+    display: inline-block;
+    width: 350px;
+    color: white;
+    font-size: 15px;
     text-align: left;
+    top: 200px;
+    left: 560px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .social-header{
     position: absolute;
-    bottom: 400px;
-    margin-left: 750px;
-
+    display: inline-block;
+    top: 330px;
+    left: 700px;
 }
+
+.instagram-portfolio{
+    position: absolute;
+    left: 580px;
+    top:  500px;
+}
+
 #navi{
-    position: fixed;
+    position: fixed; 
     display: inline-block;
     background-color: #000000;
     font-family:sans-serif;
     font-size: large;
     padding: 7px 10px 7px 7px;
-    right: 100px;
+    right: 0px;
     top: 0;
     border-radius:0px 0px 15px 15px;
-    border-right: 1px solid #ffffff;
 }
 #navi ul{
     list-style: none;
@@ -71,24 +96,45 @@ font-family:sans-serif;
 #navi a:hover, a:active{
     color: red;
 }
-#navi #aktuell a{
+#navi #aktuell {
     color: red;
 }
-.socialmedia{
-    font-family:sans-serif;
-    font-size: large;
+
+#überschrift_links{
+    text-align: left;
+    width: 800px;
+    margin-left: 60px;
 }
 .form{
-font-family: sans-serif;
-width: 250px;
+    position: relative;
+    color: black;
+    width: 250px;
+    top: 550px;
+}
+::placeholder{
+    color: black;
+}
+input{
+    background-color: grey;
+    border-radius: 3px;
+}
+button{
+    background-color: grey;
+    border-radius: 15px;
 }
 textarea{
     width: 250px; 
     border:none;
-    font-family: sans-serif;
     font-weight:bold;
     font-size:10px;
     padding:25px 25px 10px 10px;
     margin-left: 60px;
+    background-color: grey;
+}
+.steckbrief{
+    position: absolute;
+    width: 800px;
+    top: 600px;
+    left: 300px;
 }
 

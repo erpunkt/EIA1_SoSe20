@@ -1,0 +1,100 @@
+body{
+    background-image: url("bg.png");
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    position: absolute;
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: -40px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 260px;
+    left: 560px;
+    color: white;
+    z-index: 2;
+}
+
+section{
+    height: 400px;
+    width: 600px;
+    margin-top: 200px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position:relative;
+}
+
+section>.shell-pearl1{
+    position: absolute;
+    top: 300px;
+    right: 0px;
+    bottom: 0px;
+    left: 450px;
+    height: 70px;
+    width:64px;
+}
+section>.shell1{
+    position: absolute;
+    top: 300px;
+    right: 0px;
+    bottom: 0px;
+    left: 450px;
+    height: 70px;
+    width:64px;
+}
+
+section>.shell-pearl2{
+    position: absolute;
+    top: 250px;
+    right: 0px;
+    bottom: 0px;
+    left: 150px;
+    height: 70px;
+    width:64px;
+}
+section>.shell2{
+    position: absolute;
+    top: 250px;
+    right: 0px;
+    bottom: 0px;
+    left: 150px;
+    height: 70px;
+    width:64px;
+}
+
+section>.shell-pearl3{
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    bottom: 0px;
+    left: 200px;
+    height: 70px;
+    width:64px;
+}
+
+section>.shell3{
+    position: absolute;
+    top: 90px;
+    right: 0px;
+    bottom: 0px;
+    left: 200px;
+    height: 70px;
+    width:64px;
+}
+
+.shell-pearl1:hover{
+    opacity: 0 ;
+}
+
+.shell-pearl2:hover{
+    opacity: 0 ;
+}
+
+.shell-pearl3:hover{
+    opacity: 0 ;
+}
+

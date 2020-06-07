@@ -7,6 +7,13 @@ var northamericaAbsolute = 6600.4 + 6139.9 + 6375.8 + 6262.8 + 5998.9 + 6167 + 6
 var asiaAbsolute = 12954.7 + 13246.6 + 13986.8 + 14860.1 + 15308.8 + 15660.2 + 15787.7 + 15877 + 15984 + 16274.3 + 16274.1;
 var australiaAbsolute = 1993 + 1875.7 + 1939.1 + 2035.2 + 2063.2 + 2014.7 + 2027.6 + 1986.8 + 1997.4 + 2001.3 + 2100.5;
 var worldAbsolute = africaAbsolute + southamericaAbsolute + europeAbsolute + northamericaAbsolute + australiaAbsolute + australiaAbsolute;
+/*WERTE08*/
+var africa08 = 1028;
+var southamerica08 = 1132.6;
+var europe08 = 4965.7;
+var northamerica08 = 6600.4;
+var asia08 = 12954.7;
+var australia08 = 1993;
 /*Relativ zur Gesamtemission*/
 var africaRelative = (africaAbsolute / worldAbsolute) * 100;
 var southamericaRealtive = (southamericaAbsolute / worldAbsolute) * 100;
@@ -22,12 +29,12 @@ var northamericaGrowthAbsolute = 6035.6 - 6600.4;
 var asiaGrowthAbsolute = 16274.1 - 12954.7;
 var australiaGrowthAbsolute = 2100.5 - 1993;
 /*Veränderung 2008 -2018 in %*/
-var africaGrowth = (africaGrowthAbsolute / africaAbsolute) * 100;
-var southamericaGrowth = (southamericaAbsolute / southamericaAbsolute) * 100;
-var europeGrowth = (europeGrowthAbsolute / europeAbsolute) * 100;
-var northamericaGrowth = (northamericaGrowthAbsolute / northamericaAbsolute) * 100;
-var asiaGrowth = (asiaGrowthAbsolute / asiaAbsolute) * 100;
-var australiaGrowth = (australiaGrowthAbsolute / australiaAbsolute) * 100;
+var africaGrowth = (africaGrowthAbsolute / africa08) * 100;
+var southamericaGrowth = (southamericaAbsolute / southamerica08) * 100;
+var europeGrowth = (europeGrowthAbsolute / europe08) * 100;
+var northamericaGrowth = (northamericaGrowthAbsolute / northamerica08) * 100;
+var asiaGrowth = (asiaGrowthAbsolute / asia08) * 100;
+var australiaGrowth = (australiaGrowthAbsolute / australia08) * 100;
 console.log("Die Emission von Afrika ist: " + africaAbsolute + "kg CO2");
 console.log("Relativ zur Gesamtemission der Welt verursacht Afrika damit " + africaRelative + " %");
 console.log("Für Afrika hat sich 2018 im Vergleich zu 2008 die Emission um " + africaGrowth + " % verändert");

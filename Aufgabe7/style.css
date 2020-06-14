@@ -1,0 +1,96 @@
+body {
+    background: black;
+}
+
+#center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 245px;
+    transform: translate(-50%, -50%);
+}
+
+
+button {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+#button1 {
+    left: 0px;
+    top: 0px;
+    background-color:#2064D1;
+    position: absolute;
+}
+
+#button2 {
+    left: 155px;
+    top: 0px;
+    background-color:#2064D1;
+    position: absolute;
+}
+
+#button3 {
+    left: 310px;
+    top: 0px;
+    background-color:#2064D1;
+    position: absolute;
+}
+
+#button4 {
+    left: 0px;
+    top: 155px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button5 {
+    left: 155px;
+    top: 155px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button6 {
+    left: 310px;
+    top: 155px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button7 {
+    left: 0px;
+    top: 310px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button8 {
+    left: 155px;
+    top: 310px;
+    background-color:#CB6D2A;
+    position: absolute;
+}
+
+#button9 {
+    left: 310px;
+    top: 310px;
+    background-color:#CB6D2A;
+    position: absolute;
+}
+
+#playButton {
+    position: absolute;
+    left: 160px;
+    top: 460px;
+}
+
+#playButton:hover{
+    opacity: .7;
+}
+

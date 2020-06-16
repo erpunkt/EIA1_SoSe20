@@ -1,18 +1,19 @@
 "use strict";
+var mp3sounds = ["assets/A.mp3", "assets/C.mp3", "assets/F.mp3", "assets/G.mp3", "assets/hihat.mp3", "assets/kick.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/snare.mp3"];
 window.addEventListener("load", function () {
-    document.querySelector("#button1").addEventListener("mousedown", function () { playSample("assets/kick.mp3"); });
-    document.querySelector("#button2").addEventListener("mousedown", function () { playSample("assets/snare.mp3"); });
-    document.querySelector("#button3").addEventListener("mousedown", function () { playSample("assets/hihat.mp3"); });
-    document.querySelector("#button4").addEventListener("mousedown", function () { playSample("assets/F.mp3"); });
-    document.querySelector("#button5").addEventListener("mousedown", function () { playSample("assets/G.mp3"); });
-    document.querySelector("#button6").addEventListener("mousedown", function () { playSample("assets/A.mp3"); });
-    document.querySelector("#button7").addEventListener("mousedown", function () { playSample("assets/C.mp3"); });
-    document.querySelector("#button8").addEventListener("mousedown", function () { playSample("assets/laugh-1.mp3"); });
-    document.querySelector("#button9").addEventListener("mousedown", function () { playSample("assets/laugh-2.mp3"); });
+    document.querySelector("#button1").addEventListener("mousedown", function () { playSample(0); });
+    document.querySelector("#button2").addEventListener("mousedown", function () { playSample(1); });
+    document.querySelector("#button3").addEventListener("mousedown", function () { playSample(2); });
+    document.querySelector("#button4").addEventListener("mousedown", function () { playSample(3); });
+    document.querySelector("#button5").addEventListener("mousedown", function () { playSample(4); });
+    document.querySelector("#button6").addEventListener("mousedown", function () { playSample(5); });
+    document.querySelector("#button7").addEventListener("mousedown", function () { playSample(6); });
+    document.querySelector("#button8").addEventListener("mousedown", function () { playSample(7); });
+    document.querySelector("#button9").addEventListener("mousedown", function () { playSample(8); });
     document.querySelector("#playButton").addEventListener("click", playBeat);
 });
-function playSample(mp3sounds) {
-    var sound = new Audio(mp3sounds);
+function playSample(bNumber) {
+    var sound = new Audio(mp3sounds[bNumber]);
     sound.play();
 }
 function playBeat() {

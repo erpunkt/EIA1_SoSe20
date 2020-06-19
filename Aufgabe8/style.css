@@ -1,0 +1,138 @@
+body {
+    background-color: #000000;
+    text-align: center;
+}
+
+#center {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    transform: translate(-50%, -50%);
+    width: 245px;
+}
+
+button {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    
+}
+
+button:hover {
+    opacity: .9;
+}
+
+#button1 {
+    left: 0px;
+    top: 0px;
+    background-color:#2064D1;
+    position: absolute;
+}
+
+#button2 {
+    left: 155px;
+    top: 0px;
+    background-color:#2064D1;
+    position: absolute;
+}
+
+#button3 {
+    left: 310px;
+    top: 0px;
+    background-color:#2064D1;
+    position: absolute;
+}
+#button4 {
+    left: 0px;
+    top: 155px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button5 {
+    left: 155px;
+    top: 155px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button6 {
+    left: 310px;
+    top: 155px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button7 {
+    left: 0px;
+    top: 310px;
+    background-color:#E84993;
+    position: absolute;
+}
+
+#button8 {
+    left: 155px;
+    top: 310px;
+    background-color:#CB6D2A;
+    position: absolute;
+}
+
+#button9 {
+    left: 310px;
+    top: 310px;
+    background-color:#CB6D2A;
+    position: absolute;
+}
+
+#stopButton {
+    left: 195px;
+    top: 500px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 70px;
+    border-radius: 0;
+}
+
+#stopButton:hover {
+    transform: scale(1.1);
+}
+
+#playButton {
+    color: white;
+    background-color: black;
+    position: absolute;
+    left: 195px;
+    top: 500px;
+    font-size: 70px;
+}
+
+#playButton:hover {
+    transform: scale(1.1);
+}
+
+#trashButton {
+    color: white;
+    background-color: black;
+    position: absolute;
+    left: 355px;
+    top: 500px;
+    font-size: 70px;
+}
+
+#trashButton:hover {
+    transform: scale(1.1);
+}
+
+#microButton {
+    color: white;
+    background-color: black;
+    position: absolute;
+    left: 45px;
+    top: 500px;
+    font-size: 70px;
+}
+
+#microButton:hover {
+    transform: scale(1.1);
+}

@@ -84,7 +84,7 @@ button:hover {
     position: absolute;
 }
 
-.fa-play-circle {
+#playButton {
     color: white;
     background-color: black;
     position: absolute;
@@ -93,11 +93,26 @@ button:hover {
     font-size: 70px;
 }
 
-.fa-play-circle:hover {
+#playButton:hover {
     transform: scale(1.1);
 }
 
-.fa-trash {
+#stopButton{
+    color: white;
+    background-color: black;
+    position: absolute;
+    left: 195px;
+    top: 500px;
+    font-size: 70px;    
+}
+
+#stopButton:hover{
+    transform: scale(1.1);
+}
+
+
+
+#trashButton {
     color: white;
     background-color: black;
     position: absolute;
@@ -106,11 +121,11 @@ button:hover {
     font-size: 70px;
 }
 
-.fa-trash:hover {
+#trashButton:hover {
     transform: scale(1.1);
 }
 
-.fa-microphone-alt {
+#microButton {
     color: white;
     background-color: black;
     position: absolute;
@@ -118,6 +133,6 @@ button:hover {
     top: 500px;
     font-size: 70px;
 }
-.fa-microphone-alt:hover {
+#microButton:hover {
     transform: scale(1.1);
 }

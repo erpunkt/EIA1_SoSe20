@@ -1,78 +1,92 @@
-var beat: string[] =  ["assets/hihat.mp3", "assets/hihat.mp3", "assets/laugh-2.mp3", "assets/kick.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/kick.mp3", "assets/kick.mp3", "assets/kick.mp3", "assets/snare.mp3", "assets/laugh-1.mp3", "assets/C.mp3", "assets/A.mp3", "assets/G.mp3", "assets/F.mp3"];
-var mp3sounds: string[] = ["assets/A.mp3", "assets/C.mp3", "assets/F.mp3", "assets/G.mp3", "assets/hihat.mp3", "assets/kick.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/snare.mp3"];
+var mp3sounds: HTMLAudioElement = ["assets/A.mp3", "assets/C.mp3", "assets/F.mp3", "assets/G.mp3", "assets/hihat.mp3", "assets/kick.mp3", "assets/laugh-1.mp3", "assets/laugh-2.mp3", "assets/snare.mp3"];
 
-window.addEventListener("load", function() {
-    document.querySelector("#button1").addEventListener("mousedown", function(): void { playSample(0); });
-    document.querySelector("#button2").addEventListener("mousedown", function(): void { playSample(1); });
-    document.querySelector("#button3").addEventListener("mousedown", function(): void { playSample(2); });
-    document.querySelector("#button4").addEventListener("mousedown", function(): void { playSample(3); });
-    document.querySelector("#button5").addEventListener("mousedown", function(): void { playSample(4); });
-    document.querySelector("#button6").addEventListener("mousedown", function(): void { playSample(5); });
-    document.querySelector("#button7").addEventListener("mousedown", function(): void { playSample(6); });
-    document.querySelector("#button8").addEventListener("mousedown", function(): void { playSample(7); });
-    document.querySelector("#button9").addEventListener("mousedown", function(): void { playSample(8); });
+window.addEventListener("load", function () {
+    document.querySelector("#button1").addEventListener("click", function () {
+        playSample(0);
+    });
+    document.querySelector("#button2").addEventListener("click", function () {
+        playSample(1);
+    });
+    document.querySelector("#button3").addEventListener("click", function () {
+        playSample(2);
+    });
+    document.querySelector("#button4").addEventListener("click", function () {
+        playSample(3);
+    });
+    document.querySelector("#button5").addEventListener("click", function () {
+        playSample(4);
+    });
+    document.querySelector("#button6").addEventListener("click", function () {
+        playSample(5);
+    });
+    document.querySelector("#button7").addEventListener("click", function () {
+        playSample(6);
+    });
+    document.querySelector("#button8").addEventListener("click", function () {
+        playSample(7);
+    });
+    document.querySelector("#button9").addEventListener("click", function () {
+        playSample(8);
+    });
+    document.querySelector(".fa-microphone.alt").addEventListener("click", function () {
+        recordBeat();
+    });
+    document.querySelector(".fa-play-circle").addEventListener("click", function () {playButton(); });
+    document.querySelector(".fa-trash").addEventListener("click", function () {deleteBeat();});
 });
-
+var tempo: number = undefined;
+var beat = ["assets/hihat.mp3", "assets/hihat.mp3", "assets/laugh-2.mp3", "assets/kick.mp3"];
 var record: boolean = false;
-function playSample(bNumber: number): void {
+var index: number = 0;
+
+function playSample(bNumber) {
     var sound: HTMLAudioElement = new Audio(mp3sounds[bNumber]);
     sound.play();
     if (record == true) {
-        beat.push(mp3sounds[bNumber]);
-        console.log(beat);
+        beat.push(mp3sounds);
     }
 }
 
-
-
-//mit Hilfe von Annete//
-var playBut: HTMLElement = document.querySelector("#playButton");
-
-document.querySelector(".fa-play").addEventListener("click", function() {
-  
-
-  if (playBut.classList.contains ("fa-play-circle")) {
-    playBut.classList.remove ("fa-play-circle");
-    playBut.classList.add ("fa-stop-circle");
-    playBeat(beat);
-  } else {
-    playBut.classList.remove ("fa-stop-circle");
-    playbut.classList.add ("fa-play-circle");
-    stopbeat();       
-  }
-  });
-
-
-var index: number = 0;
-
-function playBeat(): void {
-    function startBeat() {
-        var sound = new Audio(beat[index]);
-        sound.play();
-        index++;
-        if (index > 2)
-            index = 0;
-    }
+function playBeat() {
+    tempo = setTempo
+        (function () {
+            var sound: HTMLAudioElement = new Audio(beat[index]);
+            sound.play();
+            index++;
+            if (index >= beat.length)
+                index = 0;
+        }, 500);
 }
 
-var myinterval: number;
+/*mit Hilfe von Annette*/
 
-function stopbeat() {
-    clearInterval(myinterval); 
-} 
+function playButton() {
+    var index = O;
+    var playB = document.getElementById("#playButton");
 
-document.querySelector(".fa-trash").addEventListener("click", function() {deleteBeat();
- });
+    if (playB.classList.contains("far fa-play-circle")) {
+        playB.classList.remove("far fa-play-circle");
+        playB.classList.add("fa-stop-circle");
+        tempo = setInterval(playBeat, 500);
+        record = false;
+    } else {
+        playB.classList.remove("fa-stop-circle");
+        playB.classList.add("fa-play-circle");
+        clearInterval(tempo);
+    }
+}
 
 function deleteBeat() {
- beat.length = 0;
+    beat.length = 0;
+    console.log("deleted");
+    alert("Deleted Beat!");
 }
 
-document.querySelector(".fa-microphone-alt").addEventListener("click", function() {recordBeat(); 
-});
 
 function recordBeat() {
     record = true;
+    console.log("recording");
+    alert("Recording Beat!");
 }
 
 

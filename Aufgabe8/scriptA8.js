@@ -52,7 +52,6 @@ function playBeat() {
         (function (i) {
             setTimeout(function () {
                 playSample(beat[i]);
-                alert("beat");
             }, tempo * i);
         })(i);
     }
@@ -84,3 +83,4 @@ function recordBeat() {
     console.log("recording");
     alert("Recording Beat!");
 }
+//# sourceMappingURL=scriptA8.js.map

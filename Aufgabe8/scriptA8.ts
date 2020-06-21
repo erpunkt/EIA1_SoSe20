@@ -55,10 +55,8 @@ function playBeat() {
         (function (i) {
             setTimeout(function () {
                 playSample(beat[i]);
-                alert("beat");
             }, tempo * i);
         })(i);
-
     };
 
 }

@@ -24,7 +24,8 @@ function playSample(bNumber: number): void {
 }
 
 
-// tslint:disable-next-line: typedef
+
+//mit Hilfe von Annete//
 var playBut: HTMLElement = document.querySelector("#playButton");
 
 document.querySelector(".fa-play").addEventListener("click", function() {

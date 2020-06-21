@@ -21,7 +21,7 @@ function playSample(bNumber) {
         console.log(beat);
     }
 }
-// tslint:disable-next-line: typedef
+//mit Hilfe von Annete//
 var playBut = document.querySelector("#playButton");
 document.querySelector(".fa-play").addEventListener("click", function () {
     if (playBut.classList.contains("fa-play-circle")) {

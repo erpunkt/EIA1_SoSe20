@@ -27,38 +27,43 @@ window.addEventListener("load", function () {
     document.querySelector("#button9").addEventListener("click", function () {
         playSample(8);
     });
-    document.querySelector(".fa-microphone.alt").addEventListener("click", function () {
+    document.getElementById("microButton").addEventListener("click", function () {
         recordBeat();
     });
-    document.querySelector(".fa-play-circle").addEventListener("click", function () { playButton(); });
-    document.querySelector(".fa-trash").addEventListener("click", function () { deleteBeat(); });
+    document.querySelector(".fa-play-circle").addEventListener("click", function () {
+        playButton();
+    });
+    document.querySelector(".fa-trash").addEventListener("click", function () {
+        deleteBeat();
+    });
 });
-var tempo = undefined;
-var beat = ["assets/hihat.mp3", "assets/hihat.mp3", "assets/laugh-2.mp3", "assets/kick.mp3"];
+var tempo = 5000;
+var beat = [0, 4, 3, 5];
 var record = false;
-var index = 0;
 function playSample(bNumber) {
     var sound = new Audio(mp3sounds[bNumber]);
     sound.play();
     if (record == true) {
-        beat.push(mp3sounds);
+        beat.push(mp3sounds[bNumber]);
     }
 }
 function playBeat() {
-    tempo = setTempo(function () {
-        var sound = new Audio(beat[index]);
-        sound.play();
-        index++;
-        if (index >= beat.length)
-            index = 0;
-    }, 500);
+    for (var i = 0; i < beat.length - 1; i++) {
+        (function (i) {
+            setTimeout(function () {
+                playSample(beat[i]);
+                alert("beat");
+            }, tempo * i);
+        })(i);
+    }
+    ;
 }
 /*mit Hilfe von Annette*/
 function playButton() {
-    var index = O;
-    var playB = document.getElementById("#playButton");
-    if (playB.classList.contains("far fa-play-circle")) {
-        playB.classList.remove("far fa-play-circle");
+    var index = 0;
+    var playB = document.getElementById("playButton");
+    if (playB.classList.contains("fa-play-circle")) {
+        playB.classList.remove("fa-play-circle");
         playB.classList.add("fa-stop-circle");
         tempo = setInterval(playBeat, 500);
         record = false;
@@ -79,4 +84,3 @@ function recordBeat() {
     console.log("recording");
     alert("Recording Beat!");
 }
-//# sourceMappingURL=scriptA8.js.map

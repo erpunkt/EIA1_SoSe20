@@ -57,7 +57,7 @@ document.querySelector(".northamerica").addEventListener("click", northAmericaFu
 document.querySelector(".southamerica").addEventListener("click", southAmericaFunction);
 document.querySelector(".asia").addEventListener("click", asiaFunction);
 document.querySelector(".australia").addEventListener("click", australiaFunction);
-};
+
    
 /*Africa*/
 console.log("Die Emission von Afrika ist: " + africa18 + " kg CO2");
@@ -155,6 +155,6 @@ function australiaFunction() {
     document.querySelector("#headlineGrowthAbsolute").innerHTML = australiaGrowthAbsolute;
     document.querySelector(".chart").setAttribute("style", "height: 6.654%");
     }
-
+});
     
     

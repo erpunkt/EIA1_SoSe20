@@ -32,65 +32,90 @@ window.addEventListener("load", function (): void {
     document.getElementById("microButton").addEventListener("click", function (): void {
         recordBeat();
     });
-    document.querySelector(".fa-play-circle").addEventListener("click", function (): void {
-        playButton();
-    });
+    document.querySelector(".fa-play-circle").addEventListener("click",
+        playButton);
     document.querySelector(".fa-trash").addEventListener("click", function (): void {
         deleteBeat();
     });
 });
-var tempo: number = 5000;
-var beat = [0, 4, 3, 5];
-var record: boolean = false;
 
-function playSample(bNumber) {
+var beat: string[] = ["assets/kick.mp3", "assets/snare.mp3", "assets/hihat.mp3"];
+
+var record: boolean = false;
+var tempo: any;
+
+//Buttons mit Samples + Aufnahme funktioniert//
+function playSample(bNumber: number): void {
     var sound: HTMLAudioElement = new Audio(mp3sounds[bNumber]);
     sound.play();
     if (record == true) {
         beat.push(mp3sounds[bNumber]);
     }
 }
-function playBeat() {
-    for (var i: number = 0; i < beat.length - 1; i++) {
-        (function (i) {
-            setTimeout(function () {
-                playSample(beat[i]);
-            }, tempo * i);
-        })(i);
-    };
+function recordBeat(): void {
+    if (record) {
+        record = false;
+    } else {
+        record = true;
+        console.log("recording");
+    }
+}
+
+// *Beat Abspielen wenn Play gedrückt wird*//
+var intervals: any = [];
+function playBeat(): void {
+    var i: number = 0;
+    tempo = setInterval
+        (function startBeat(): void {
+            play(beat[i]);
+            i += 1;
+            intervals.push(tempo);
+            if (i >= beat.length) {
+                i = 0;
+            }
+        },
+            600);
+}
+
+
+function play(_song: string): void {
+    var sound: HTMLAudioElement = new Audio(_song);
+    sound.play();
+
 
 }
+
 
 
 /*mit Hilfe von Annette*/
 
-function playButton() {
-    var index = 0;
-    var playB = document.getElementById("playButton");
-
+function playButton(): void {
+    var playB: HTMLElement = document.getElementById("playButton");
     if (playB.classList.contains("fa-play-circle")) {
         playB.classList.remove("fa-play-circle");
         playB.classList.add("fa-stop-circle");
-        tempo = setInterval(playBeat, 500);
-        record = false;
+        playBeat();
     } else {
         playB.classList.remove("fa-stop-circle");
         playB.classList.add("fa-play-circle");
-        clearInterval(tempo);
+        stopBeat();
     }
 }
 
-function deleteBeat() {
+//Beat stoppen//
+function stopBeat(): void {
+    for (var i: number = 0; i < intervals.length - 1; i++) {
+        clearInterval(intervals[i]);
+    }
+}
+
+//Beat löschen - funktioniert//
+function deleteBeat(): void {
     beat.length = 0;
     console.log("deleted");
     alert("Deleted Beat!");
 }
 
 
-function recordBeat() {
-    record = true;
-    console.log("recording");
-    alert("Recording Beat!");
-}
-
+//hier kommt Tastaturbedienung hin//
 

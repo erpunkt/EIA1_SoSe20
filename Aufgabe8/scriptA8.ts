@@ -32,17 +32,17 @@ window.addEventListener("load", function (): void {
     document.getElementById("microButton").addEventListener("click", function (): void {
         recordBeat();
     });
-    document.querySelector(".fa-play-circle").addEventListener("click",
-        playButton);
+    document.querySelector(".fa-play-circle").addEventListener("click", playButton);
+
     document.querySelector(".fa-trash").addEventListener("click", function (): void {
         deleteBeat();
     });
 });
 
-var beat: string[] = ["assets/kick.mp3", "assets/snare.mp3", "assets/hihat.mp3"];
+var beat: string[] = ["/assets/kick.mp3", "/assets/snare.mp3", "/assets/hihat.mp3"];
 
 var record: boolean = false;
-var tempo: any;
+var tempo: number;
 
 //Buttons mit Samples + Aufnahme funktioniert//
 function playSample(bNumber: number): void {
@@ -61,30 +61,20 @@ function recordBeat(): void {
     }
 }
 
-// *Beat Abspielen wenn Play gedrückt wird*//
-var intervals: any = [];
+//*Beat Abspielen wenn Play gedrückt wird*//
+let i: number = 0;
 function playBeat(): void {
     var i: number = 0;
     tempo = setInterval
         (function startBeat(): void {
-            play(beat[i]);
+            playSample(beat[index]);
             i += 1;
-            intervals.push(tempo);
             if (i >= beat.length) {
                 i = 0;
             }
-        },
-            600);
+        },                          
+         600);
 }
-
-
-function play(_song: string): void {
-    var sound: HTMLAudioElement = new Audio(_song);
-    sound.play();
-
-
-}
-
 
 
 /*mit Hilfe von Annette*/
@@ -104,9 +94,8 @@ function playButton(): void {
 
 //Beat stoppen//
 function stopBeat(): void {
-    for (var i: number = 0; i < intervals.length - 1; i++) {
-        clearInterval(intervals[i]);
-    }
+    var tempo: number = 0;
+    clearInterval(tempo);
 }
 
 //Beat löschen - funktioniert//
@@ -118,4 +107,3 @@ function deleteBeat(): void {
 
 
 //hier kommt Tastaturbedienung hin//
-

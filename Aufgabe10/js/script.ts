@@ -114,7 +114,18 @@ function drawListToDOM(): void {
 }
 
 function updateCounter(): void {
-    counterDOMElement.innerHTML = toDoList.length + " in total";
+    let toDoDone: number = 0;
+    let toDoOpen: number = 0;
+
+    for (var index: number = 0; index < toDoList.length; index++) {
+        if (toDoList[index].todosChecked == true) {
+            toDoDone++;
+        }
+        else {
+            toDoOpen++;
+        }
+    }
+    counterDOMElement.innerHTML = toDoList.length + " in total | " + toDoDone + " done | " + toDoOpen + " open";
 }
 
 /**
@@ -190,3 +201,4 @@ function deleteTodo(index: number): void {
      */
     drawListToDOM();
 }
+

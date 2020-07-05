@@ -94,7 +94,17 @@ function drawListToDOM() {
     updateCounter();
 }
 function updateCounter() {
-    counterDOMElement.innerHTML = toDoList.length + " in total";
+    let toDoDone = 0;
+    let toDoOpen = 0;
+    for (var index = 0; index < toDoList.length; index++) {
+        if (toDoList[index].todosChecked == true) {
+            toDoDone++;
+        }
+        else {
+            toDoOpen++;
+        }
+    }
+    counterDOMElement.innerHTML = toDoList.length + " in total | " + toDoDone + " done | " + toDoOpen + " open";
 }
 /**
  * Ein neues ToDo wird folgendermaßen erstellt:
